@@ -1,0 +1,2 @@
+Admin portal: /admin_portal
+Parameter hint: access=user

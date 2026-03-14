@@ -1,0 +1,35 @@
+# Node modules (will be installed in container)
+node_modules/
+
+# Build output (will be built in container)
+dist/
+
+# Test files
+tests/
+*.test.ts
+jest.config.js
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Kiro
+.kiro/
+
+# Demo files
+demo-*.ts
+
+# Task summaries
+TASK-*.md
+
+# Challenge files (will be generated at runtime)
+challenge_files/

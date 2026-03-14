@@ -10,7 +10,7 @@ describe('validateAccess', () => {
       
       expect(result.authorized).toBe(true);
       expect(result.message).toBe('Welcome Admin');
-      expect(result.flag).toBe('flag{developer_upload_compromised}');
+      expect(result.flag).toBe('TRACECTF{developer_upload_compromised}');
     });
     
     it('should grant access for "ADMIN" (case-insensitive)', () => {
@@ -18,7 +18,7 @@ describe('validateAccess', () => {
       
       expect(result.authorized).toBe(true);
       expect(result.message).toBe('Welcome Admin');
-      expect(result.flag).toBe('flag{developer_upload_compromised}');
+      expect(result.flag).toBe('TRACECTF{developer_upload_compromised}');
     });
     
     it('should grant access for "Admin" (mixed case)', () => {
@@ -32,7 +32,7 @@ describe('validateAccess', () => {
       const result = validateAccess(' admin ');
       
       expect(result.authorized).toBe(true);
-      expect(result.flag).toBe('flag{developer_upload_compromised}');
+      expect(result.flag).toBe('TRACECTF{developer_upload_compromised}');
     });
     
     it('should grant access for "  ADMIN  " (case-insensitive with whitespace)', () => {
@@ -134,7 +134,7 @@ describe('validateAccess', () => {
       
       testCases.forEach(param => {
         const result = validateAccess(param);
-        expect(result.flag).toBe('flag{developer_upload_compromised}');
+        expect(result.flag).toBe('TRACECTF{developer_upload_compromised}');
       });
     });
   });

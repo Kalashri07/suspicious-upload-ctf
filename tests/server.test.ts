@@ -143,7 +143,7 @@ describe('Landing Page Route', () => {
     const response = await request(app).get('/');
 
     // Should not include the actual flag value
-    expect(response.text).not.toContain('flag{developer_upload_compromised}');
+    expect(response.text).not.toContain('TRACECTF{developer_upload_compromised}');
     // The page mentions "flag{...}" as format example, which is acceptable
   });
 
@@ -391,7 +391,7 @@ describe('Admin Portal Route', () => {
 
     expect(response.status).toBe(200);
     expect(response.text).toContain('Welcome Admin');
-    expect(response.text).toContain('flag{developer_upload_compromised}');
+    expect(response.text).toContain('TRACECTF{developer_upload_compromised}');
   });
 
   test('should return invalid parameter message for other values', async () => {
@@ -404,7 +404,7 @@ describe('Admin Portal Route', () => {
   test('should be case-insensitive for access parameter', async () => {
     const responseAdmin = await request(app).get('/admin_portal?access=ADMIN');
     expect(responseAdmin.status).toBe(200);
-    expect(responseAdmin.text).toContain('flag{developer_upload_compromised}');
+    expect(responseAdmin.text).toContain('TRACECTF{developer_upload_compromised}');
 
     const responseUser = await request(app).get('/admin_portal?access=USER');
     expect(responseUser.status).toBe(200);
@@ -415,7 +415,7 @@ describe('Admin Portal Route', () => {
     const response = await request(app).get('/admin_portal?access=%20admin%20');
 
     expect(response.status).toBe(200);
-    expect(response.text).toContain('flag{developer_upload_compromised}');
+    expect(response.text).toContain('TRACECTF{developer_upload_compromised}');
   });
 
   test('should log all access attempts', async () => {

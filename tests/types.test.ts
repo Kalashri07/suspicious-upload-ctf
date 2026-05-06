@@ -129,12 +129,12 @@ describe('Type Definitions', () => {
       const result: import('../src/types').AccessResult = {
         authorized: true,
         message: 'Welcome Admin',
-        flag: 'TRACECTF{developer_upload_compromised}'
+        flag: 'HW{developer_upload_compromised}'
       };
 
       expect(result.authorized).toBe(true);
       expect(result.message).toBe('Welcome Admin');
-      expect(result.flag).toBe('TRACECTF{developer_upload_compromised}');
+      expect(result.flag).toBe('HW{developer_upload_compromised}');
     });
 
     it('should create a valid AccessResult for denied access', () => {

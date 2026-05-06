@@ -7,7 +7,7 @@ import { AccessResult } from './types';
  * The flag that is returned when access is granted
  * Requirements: 8.1
  */
-const FLAG = 'TRACECTF{developer_upload_compromised}';
+const FLAG = 'HW{developer_upload_compromised}';
 
 /**
  * Validate access parameter and determine authorization
